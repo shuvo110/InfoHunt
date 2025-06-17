@@ -93,13 +93,13 @@ function TodoAdd() {
                     type="date"
                     value={item.date || ""}
                     onChange={(e) => handleDateChange(index, e.target.value)}
-                    className="border border-gray-300 rounded px-2 py-1 text-sm"
+                    className="border border-gray-300 rounded px-2 py-1 text-sm text-black"
                   />
                   <input
                     type="time"
                     value={item.time || ""}
                     onChange={(e) => handleTimeChange(index, e.target.value)}
-                    className="border border-gray-300 rounded px-2 py-1 text-sm"
+                    className="border border-gray-300 rounded px-2 py-1 text-sm text-black"
                   />
                   <input
                     type="checkbox"
