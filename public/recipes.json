@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Chicken Curry",
+    "image": "https://i.pinimg.com/736x/fa/da/1b/fada1b211e8f8515aeebbf6bb67b1755.jpg",
+    "ingredients": [
+      "500g chicken",
+      "1 onion",
+      "2 cloves garlic",
+      "1 tbsp curry powder",
+      "1 cup coconut milk",
+      "Salt to taste"
+    ],
+    "instructions": "Heat oil, sauté onion and garlic. Add chicken and brown. Mix curry powder, coconut milk, and salt. Simmer for 20 minutes."
+  },
+  {
+    "id": 2,
+    "title": "Vegetable Stir Fry",
+    "image": "https://i.pinimg.com/736x/5c/64/de/5c64de80bde46bfb4bdc40f83610bd40.jpg",
+    "ingredients": [
+      "1 cup broccoli",
+      "1 carrot",
+      "1 bell pepper",
+      "2 tbsp soy sauce",
+      "1 tsp sesame oil"
+    ],
+    "instructions": "Heat oil, stir fry vegetables for 5-7 minutes. Add soy sauce and cook 2 more minutes."
+  },
+  {
+    "id": 3,
+    "title":"Pasta Carbonara",
+    "image": "https://i.pinimg.com/736x/af/f0/fd/aff0fd62118135fe35aa48be3be2c474.jpg",
+    "ingredients": [
+      "200g pasta",
+      "2 eggs",
+      "100g bacon",
+      "50g grated cheese",
+      "Salt and pepper"
+    ],
+    "instructions": "Cook pasta. Fry bacon. Beat eggs with cheese, mix with hot pasta and bacon. Add seasoning."
+  },
+  {
+    "id": 4,
+    "title": "Beef Steak",
+    "image": "https://i.pinimg.com/736x/fd/9e/a7/fd9ea78f0398177233f948b0bffb29a5.jpg",
+    "ingredients": [
+      "300g beef steak",
+      "Salt",
+      "Black pepper",
+      "Olive oil",
+      "Garlic"
+    ],
+    "instructions": "Season steak. Sear in hot pan with oil and garlic for 3-5 minutes per side depending on doneness."
+  },
+  {
+    "id": 5,
+    "title": "Egg Fried Rice",
+    "image": "https://i.pinimg.com/736x/eb/cc/f5/ebccf57b9d125a7a9ec818bf772dd76e.jpg",
+    "ingredients": [
+      "2 cups cooked rice",
+      "2 eggs",
+      "1/2 cup peas",
+      "1 tbsp soy sauce",
+      "1 tbsp oil"
+    ],
+    "instructions": "Scramble eggs in oil. Add rice, peas, and soy sauce. Stir-fry for 5 minutes."
+  },
+  {
+    "id": 6,
+    "title": "Tomato Soup",
+    "image": "https://i.pinimg.com/736x/dc/88/5e/dc885e424e2cc36080e3ffaee09b6dfb.jpg",
+    "ingredients": [
+      "4 tomatoes",
+      "1 onion",
+      "2 cloves garlic",
+      "1 cup vegetable broth",
+      "Salt and pepper"
+    ],
+    "instructions": "Boil tomatoes and blend with onion and garlic. Add broth and season. Simmer for 10 minutes."
+  },
+  {
+    "id": 7,
+    "title": "Fish Tacos",
+    "image": "https://i.pinimg.com/736x/62/86/d4/6286d4fc91e13d0e920837830b065225.jpg",
+    "ingredients": [
+      "200g white fish",
+      "Taco shells",
+      "Lettuce",
+      "Tomato",
+      "Yogurt sauce"
+    ],
+    "instructions": "Grill fish with spices. Assemble in taco shells with lettuce, tomato, and yogurt sauce."
+  },
+  {
+    "id": 8,
+    "title": "Banana Pancakes",
+    "image": "https://i.pinimg.com/736x/b1/9b/83/b19b83cb53b39d0dcce78969d21c1fc7.jpg",
+    "ingredients": [
+      "2 bananas",
+      "1 cup flour",
+      "1 egg",
+      "1/2 cup milk",
+      "1 tsp baking powder"
+    ],
+    "instructions": "Mash bananas, mix with all ingredients. Cook on skillet until golden on both sides."
+  },
+  {
+    "id": 9,
+    "title": "Grilled Cheese Sandwich",
+    "image": "https://i.pinimg.com/736x/bf/ca/42/bfca4217f166728ecb7a3b27af122d56.jpg",
+    "ingredients": ["2 slices bread", "2 slices cheese", "Butter"],
+    "instructions": "Butter bread slices, place cheese in between, and grill on pan until golden and melted."
+  },
+  {
+    "id": 10,
+    "title": "Fruit Salad",
+    "image": "https://i.pinimg.com/736x/ce/03/57/ce035714bffd63fd2ede1382d1568c9c.jpg",
+    "ingredients": [
+      "1 apple",
+      "1 banana",
+      "1 orange",
+      "1/2 cup grapes",
+      "1 tbsp honey",
+      "Lemon juice"
+    ],
+    "instructions": "Chop fruits, drizzle with honey and lemon juice. Toss gently and serve chilled."
+  }
+]

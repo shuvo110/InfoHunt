@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "daisyui";
+.linkNav{
+    @apply flex items-center gap-1
+}
+.time {
+    @apply text-lg font-bold text-green-600
+}
+.timeBox {
+    @apply border p-5 rounded-md bg-black/80 text-white
+}
+.iconHover {
+    @apply p-2 bg-gray-200 rounded-full hover:bg-gray-300 cursor-pointer transform ease-in-out duration-200
+}
+.hederLine {
+    @apply p-4 bg-amber-600 font-bold my-8
+}
+.footerLink{
+    @apply hover:text-green-500 hover:pl-5 transform ease-in-out duration-300
+}

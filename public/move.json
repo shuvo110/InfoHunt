@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "poster": "https://i.pinimg.com/736x/b0/ae/a4/b0aea49646879a043ad9f6ec3002e99f.jpg",
+    "description": "A thief who steals corporate secrets through dream-sharing technology is given a task to plant an idea.",
+    "watchLink": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "poster": "https://i.pinimg.com/736x/5d/55/f6/5d55f69bbe7948d202dffbbea4b857d8.jpg",
+    "description": "Batman faces the Joker, a criminal mastermind spreading chaos in Gotham.",
+    "watchLink": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+  },
+  {
+    "id": 3,
+    "title": "Interstellar",
+    "poster": "https://i.pinimg.com/736x/0b/34/ce/0b34ce2145b475247577a5d438a199b0.jpg",
+    "description": "A group of explorers travel through a wormhole in space to save humanity.",
+    "watchLink": "https://www.youtube.com/watch?v=zSWdZVtXT7E"
+  },
+  {
+    "id": 4,
+    "title": "Avengers: Endgame",
+    "poster": "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg",
+    "description": "After the devastating events of Infinity War, the Avengers unite once more to undo Thanos' actions.",
+    "watchLink": "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+  },
+  {
+    "id": 5,
+    "title": "Titanic",
+    "poster": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg",
+    "description": "A young couple from different classes fall in love aboard the ill-fated Titanic.",
+    "watchLink": "https://www.youtube.com/watch?v=kVrqfYjkTdQ"
+  },
+  {
+    "id": 6,
+    "title": "The Matrix",
+    "poster": "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
+    "description": "A computer hacker learns the truth about reality and his role in the war against its controllers.",
+    "watchLink": "https://www.youtube.com/watch?v=vKQi3bBA1y8"
+  },
+  {
+    "id": 7,
+    "title": "Forrest Gump",
+    "poster": "https://i.pinimg.com/736x/a8/39/7d/a8397dcfdf56fc342c3712a91e186575.jpg",
+    "description": "The life story of Forrest Gump, a man with a low IQ but good intentions.",
+    "watchLink": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+  },
+  {
+    "id": 8,
+    "title": "The Shawshank Redemption",
+    "poster": "https://m.media-amazon.com/images/I/51NiGlapXlL.jpg",
+    "description": "Two imprisoned men bond over years, finding solace and eventual redemption.",
+    "watchLink": "https://www.youtube.com/watch?v=6hB3S9bIaco"
+  },
+  {
+    "id": 9,
+    "title": "The Godfather",
+    "poster": "https://m.media-amazon.com/images/I/71xBLRBYOiL._AC_SY679_.jpg",
+    "description": "The aging patriarch of an organized crime dynasty transfers control to his reluctant son.",
+    "watchLink": "https://www.youtube.com/watch?v=sY1S34973zA"
+  },
+  {
+    "id": 10,
+    "title": "Joker",
+    "poster": "https://i.pinimg.com/736x/2b/b7/8b/2bb78b640ece4e18f8936193b5008d2d.jpg",
+    "description": "A mentally troubled comedian embarks on a downward spiral that leads to chaos.",
+    "watchLink": "https://www.youtube.com/watch?v=zAGVQLHvwOY"
+  }
+]
