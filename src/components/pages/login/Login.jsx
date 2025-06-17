@@ -19,7 +19,7 @@ function Login() {
         <div className="rounded-md shadow-2xl w-lg p-5 container m-auto backdrop-blur-sm">
           <div>
             <img
-              src="src/assets/logo.png"
+              src="https://i.postimg.cc/wjnk9tnF/logo.png"
               alt=""
               className="w-[150px] m-auto"
             />

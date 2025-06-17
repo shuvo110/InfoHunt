@@ -54,21 +54,48 @@ function BioCard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4">
-      <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
+    <div
+      className="min-h-screen py-10 px-4 bg-no-repeat bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url(https://i.pinimg.com/736x/9b/9c/cb/9b9ccb37139f62c0039906849727a9a8.jpg)",
+      }}
+    >
+      <div className="max-w-2xl mx-auto  p-6 rounded-lg shadow-md backdrop-blur-md text-white">
+        <h1 className="text-2xl font-bold text-center mb-6 ">
           Bio Data Form
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <Input label="Full Name" refValue={nameRef} placeholder="আপনার নাম লিখুন" />
+          <Input
+            label="Full Name"
+            refValue={nameRef}
+            placeholder="আপনার নাম লিখুন"
+          />
           <Input label="Date of Birth" type="date" refValue={dateOfBrithRef} />
-          <Input label="Phone Number" type="number" refValue={phoneRef} placeholder="মোবাইল নাম্বার" />
+          <Input
+            label="Phone Number"
+            type="number"
+            refValue={phoneRef}
+            placeholder="মোবাইল নাম্বার"
+          />
 
-          <Select label="Religion" refValue={religionRef} options={["Muslim", "Hindu", "Christian", "Buddhist"]} />
-          <Select label="Blood Group" refValue={bloodRef} options={["A+", "B+", "O+", "AB+", "A-", "B-", "O-", "AB-"]} />
+          <Select
+            label="Religion"
+            refValue={religionRef}
+            options={["Muslim", "Hindu", "Christian", "Buddhist"]}
+          />
+          <Select
+            label="Blood Group"
+            refValue={bloodRef}
+            options={["A+", "B+", "O+", "AB+", "A-", "B-", "O-", "AB-"]}
+          />
 
-          <Input label="Address" refValue={address} placeholder="আপনার ঠিকানা" />
+          <Input
+            label="Address"
+            refValue={address}
+            placeholder="আপনার ঠিকানা"
+          />
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <label className="w-[200px] font-medium">Gender</label>
@@ -94,20 +121,24 @@ function BioCard() {
               type="file"
               ref={photoRef}
               onChange={handleImageChange}
-              className="file-input file-input-bordered w-full input-accent"
+              className="file-input file-input-bordered w-full input-accent bg-transparent"
               required
             />
           </div>
 
-          <Input label="Education" refValue={educationRef} placeholder="শিক্ষাগত যোগ্যতা লিখুন" />
+          <Input
+            label="Education"
+            refValue={educationRef}
+            placeholder="শিক্ষাগত যোগ্যতা লিখুন"
+          />
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <label className="w-[200px] font-medium">Skills</label>
             <textarea
               ref={skillsRef}
-              className="textarea textarea-bordered w-full input-accent"
+              className="textarea textarea-bordered w-full input-accent bg-transparent resize-none"
               placeholder="আপনার দক্ষতা লিখুন"
-              rows="4"
+              rows="6"
               required
             />
           </div>
@@ -124,15 +155,33 @@ function BioCard() {
           </h2>
           <div className="flex justify-between items-start gap-6">
             <div className="space-y-3 text-gray-700">
-              <p><strong>Name:</strong> {bioData.name}</p>
-              <p><strong>Date of Birth:</strong> {bioData.dateOfBrith}</p>
-              <p><strong>Phone:</strong> {bioData.phone}</p>
-              <p><strong>Religion:</strong> {bioData.religion}</p>
-              <p><strong>Blood Group:</strong> {bioData.bloodGroup}</p>
-              <p><strong>Address:</strong> {bioData.address}</p>
-              <p><strong>Gender:</strong> {bioData.gender}</p>
-              <p><strong>Education:</strong> {bioData.education}</p>
-              <p><strong>Skills:</strong> {bioData.skills}</p>
+              <p>
+                <strong>Name:</strong> {bioData.name}
+              </p>
+              <p>
+                <strong>Date of Birth:</strong> {bioData.dateOfBrith}
+              </p>
+              <p>
+                <strong>Phone:</strong> {bioData.phone}
+              </p>
+              <p>
+                <strong>Religion:</strong> {bioData.religion}
+              </p>
+              <p>
+                <strong>Blood Group:</strong> {bioData.bloodGroup}
+              </p>
+              <p>
+                <strong>Address:</strong> {bioData.address}
+              </p>
+              <p>
+                <strong>Gender:</strong> {bioData.gender}
+              </p>
+              <p>
+                <strong>Education:</strong> {bioData.education}
+              </p>
+              <p>
+                <strong>Skills:</strong> {bioData.skills}
+              </p>
             </div>
             {bioData.photoURL && (
               <img
@@ -159,7 +208,7 @@ const Input = ({ label, refValue, placeholder = "", type = "text" }) => (
       type={type}
       ref={refValue}
       placeholder={placeholder}
-      className="input input-bordered w-full input-accent"
+      className="input input-bordered w-full input-accent bg-transparent"
       required
     />
   </div>
@@ -172,7 +221,7 @@ const Select = ({ label, refValue, options }) => (
     <select
       ref={refValue}
       defaultValue=""
-      className="select select-bordered w-full input-accent"
+      className="select select-bordered w-full input-accent bg-black"
       required
     >
       <option value="" disabled>

@@ -39,7 +39,7 @@ const NavBer = () => {
         >
           <abbr title="Home">
             <img
-              src="src/assets/logo.png"
+              src="https://i.postimg.cc/wjnk9tnF/logo.png"
               alt="logo"
               className="w-[100px] bg-white p-2 rounded-md"
             />
