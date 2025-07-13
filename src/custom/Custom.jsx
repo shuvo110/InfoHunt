@@ -14,7 +14,9 @@ export const UserInfoContext = createContext();
 function Custom({ children }) {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");  // error state যুক্ত করলাম
 
+  // একবারই শুধু চালানো হবে — user এর authentication state চেক করার জন্য
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -39,12 +41,12 @@ function Custom({ children }) {
   const userLogine = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+
   const googleLo = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         userUpdateProfile({
           name: user.displayName,
           email: user.email,
@@ -53,23 +55,11 @@ function Custom({ children }) {
         setError("");
       })
       .catch((error) => {
+        setError(error.message);
         console.log(error);
       });
   };
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserData({
-          name: user.displayName,
-          email: user.email,
-          profilePicture: user.photoURL,
-        });
-      } else {
-        setUserData("");
-      }
-    });
-  }, []);
   const logOut = () => {
     return signOut(auth).then(() => setUserData(null));
   };
@@ -87,7 +77,9 @@ function Custom({ children }) {
         userUpdateProfile,
         userData,
         googleLo,
-        loading
+        loading,
+        error,
+        setError, // যাতে বাইরের component গুলো error সেট করতে পারে
       }}
     >
       {children}
