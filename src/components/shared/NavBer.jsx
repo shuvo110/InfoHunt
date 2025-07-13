@@ -105,10 +105,12 @@ const NavBer = () => {
         </div>
 
         {/* Mobile Menu */}
+        {/* Mobile Menu */}
         <div className="lg:hidden dropdown dropdown-end">
           <button tabIndex={0} className="btn btn-ghost btn-circle">
             <FaBars className="text-white text-xl" />
           </button>
+
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow rounded-box w-52 bg-black text-white"
@@ -139,9 +141,17 @@ const NavBer = () => {
                 </Link>
               )}
             </li>
+
             {userData?.name && (
-              <li>
-                <span className="border rounded-full px-2 py-1 bg-green-600 uppercase font-bold">
+              <li className="flex items-center gap-2 mt-2">
+                {userData?.profilePicture && (
+                  <img
+                    src={userData.profilePicture}
+                    alt="Profile"
+                    className="rounded-full border-2 border-white"
+                  />
+                )}
+                <span className="text-white font-bold uppercase">
                   {userData.name}
                 </span>
               </li>
