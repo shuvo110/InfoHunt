@@ -151,7 +151,7 @@ const NavBer = () => {
                     className="rounded-full border-2 border-white"
                   />
                 )}
-                <span className="text-white font-bold uppercase">
+                <span className="text-white font-bold uppercase bg-red-400 border">
                   {userData.name}
                 </span>
               </li>
