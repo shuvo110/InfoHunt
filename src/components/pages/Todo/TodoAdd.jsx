@@ -85,7 +85,7 @@ function TodoAdd() {
             {addAll.map((item, index) => (
               <li
                 key={index}
-                className="flex flex-col md:flex-row md:items-center justify-between bg-black/10 p-4 rounded shadow-md gap-2"
+                className="flex flex-col md:flex-row md:items-center justify-between bg-black/50 p-4 rounded shadow-md gap-2"
               >
                 <h3 className="font-medium text-lg">{item.text}</h3>
                 <div className="flex flex-wrap gap-2 md:gap-4 items-center">

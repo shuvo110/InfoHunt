@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
+import { UserInfoContext } from "../../../custom/Custom";
+import { useNavigate } from "react-router-dom";
 function RegisterForm() {
+  const { RegestionFun } = useContext(UserInfoContext);
+  const navigate = useNavigate();
+
   const [passwordShow, setPasswordShow] = useState(false);
   const [Password, setPassword] = useState(false);
   const [error, setError] = useState("");
@@ -24,10 +30,31 @@ function RegisterForm() {
       setError("❌ Password এবং Confirm Password এক নয়!");
       return;
     }
-    setError("");
-    console.log(formData); // এখানে তুমি API-তে পাঠাতে পারো
-  };
 
+    RegestionFun(formData.email, formData.password)
+      .then((result) => {
+        const user = result.user;
+        updateProfile(user, {
+          displayName: formData.fullName,
+        })
+          .then(() => {
+            setError("");
+            alert("✅ রেজিস্ট্রেশন সফল হয়েছে!");
+            // ✅ Navigate to login after 2 seconds
+            setTimeout(() => {
+              navigate("/login");
+            }, 1000);
+          })
+          .catch((error) => {
+            setError("⚠️ প্রোফাইল আপডেট করতে সমস্যা হয়েছে");
+            console.log(error.message);
+          });
+      })
+      .catch((error) => {
+        setError("❌ এই ইমেলটি ইতিমধ্যে ব্যবহার হয়েছে");
+        console.log(error.message);
+      });
+  };
   return (
     <div
       className="min-h-screen flex items-center justify-center px-4 bg-center bg-no-repeat bg-cover"
@@ -40,7 +67,11 @@ function RegisterForm() {
         <h2 className="text-2xl font-bold text-center mb-6 text-white">
           Register
         </h2>
-        {error && <p>{error}</p>}
+        {error && (
+          <button className="btn btn-error w-full animate-bounce">
+            {error}
+          </button>
+        )}
         <form onSubmit={handleSubmit} className="space-y-4 text-white">
           <div>
             <label className="block font-medium">Full Name</label>

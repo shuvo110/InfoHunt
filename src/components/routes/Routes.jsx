@@ -11,6 +11,7 @@ import RoutsCardSin from "../pages/Recipes/RoutsCardSin";
 import BioData from "../pages/BioData/BioData";
 import BioCard from "../pages/BioData/BioCard";
 import RegisterForm from "../pages/login/RegisterForm";
+import PrivateRoute from "./PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,10 +19,31 @@ const router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       { index: true, element: <Home></Home> },
-      { path: "Weather", element: <Weather></Weather> },
-      { path: "Recipes", element: <Recipes></Recipes> },
+      {
+        path: "Weather",
+        element: (
+          <PrivateRoute>
+            <Weather></Weather>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "Recipes",
+        element: (
+          <PrivateRoute>
+            <Recipes></Recipes>
+          </PrivateRoute>
+        ),
+      },
       { path: "News", element: <News></News> },
-      { path: "ToDo", element: <ToDo></ToDo> },
+      {
+        path: "ToDo",
+        element: (
+          <PrivateRoute>
+            <ToDo></ToDo>
+          </PrivateRoute>
+        ),
+      },
       { path: "BioData", element: <BioData></BioData> },
       { path: "BioCard", element: <BioCard></BioCard> },
       { path: "login", element: <Login /> },

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CiHome } from "react-icons/ci";
 import { IoBook } from "react-icons/io5";
@@ -9,12 +9,14 @@ import {
   FaTasks,
   FaSignInAlt,
   FaBars,
+  FaSignOutAlt,
 } from "react-icons/fa";
+import { UserInfoContext } from "../../custom/Custom";
 
 const NavBer = () => {
+  const { userData, logOut } = useContext(UserInfoContext);
   const [activeLink, setActiveLink] = useState("/");
   const location = useLocation();
-
   useEffect(() => {
     setActiveLink(location.pathname || "/");
   }, [location.pathname]);
@@ -68,14 +70,38 @@ const NavBer = () => {
           ))}
         </ul>
 
-        {/* Login */}
-        <div className="hidden lg:block">
-          <Link
-            to="/login"
-            className="btn btn-sm btn-primary flex items-center gap-1"
-          >
-            <FaSignInAlt /> Login
-          </Link>
+        {/* User Info */}
+        <div className="hidden lg:flex items-center gap-2">
+          {userData?.name && (
+            <p className="border rounded-full text-white px-2 uppercase bg-green-600 font-bold">
+              {userData.name.charAt(0)}
+            </p>
+          )}
+          {userData?.profilePicture && (
+            <div>
+              <img
+                src={userData.profilePicture}
+                alt="Profile"
+                className="w-8 h-8 rounded-full border-2 border-white"
+              />
+            </div>
+          )}
+
+          {userData ? (
+            <button
+              onClick={logOut}
+              className="btn btn-sm btn-error flex items-center gap-1"
+            >
+              <FaSignOutAlt /> Logout
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="btn btn-sm btn-primary flex items-center gap-1"
+            >
+              <FaSignInAlt /> Login
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -101,11 +127,25 @@ const NavBer = () => {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link to="/login">
-                <FaSignInAlt /> Login
-              </Link>
+
+            <li className="border-t mt-2 pt-2">
+              {userData ? (
+                <button onClick={logOut} className="flex items-center gap-2">
+                  <FaSignOutAlt /> Logout
+                </button>
+              ) : (
+                <Link to="/login">
+                  <FaSignInAlt /> Login
+                </Link>
+              )}
             </li>
+            {userData?.name && (
+              <li>
+                <span className="border rounded-full px-2 py-1 bg-green-600 uppercase font-bold">
+                  {userData.name}
+                </span>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
